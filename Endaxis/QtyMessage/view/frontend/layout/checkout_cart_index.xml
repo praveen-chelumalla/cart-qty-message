@@ -1,0 +1,16 @@
+<?xml version="1.0"?>
+<page xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"  xsi:noNamespaceSchemaLocation="urn:magento:framework:View/Layout/etc/page_configuration.xsd">
+    <body>
+        <referenceContainer name="checkout.cart.container">
+            <block ifconfig="checkout/cart/enable_custom_message_qty"
+                   class="Magento\Checkout\Block\Cart\Grid"
+                   name="checkout.cart.form.message"
+                   template="Endaxis_QtyMessage::cart/qtymessage.phtml"
+                   before="checkout.cart.form">
+                <arguments>
+                    <argument name="qtyMessageViewModel" xsi:type="object">Endaxis\QtyMessage\ViewModel\QtyUpdate</argument>
+                </arguments>
+            </block>
+        </referenceContainer>
+    </body>
+</page>

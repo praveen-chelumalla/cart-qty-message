@@ -1,0 +1,12 @@
+<?php
+/**  @var $block \Magento\Checkout\Block\Cart\Grid */
+/** @var \Endaxis\QtyMessage\ViewModel\QtyUpdate $qtyMessageViewModel */
+$qtyMessageViewModel = $block->getData('qtyMessageViewModel');
+$isDisplayQtyMessage = $qtyMessageViewModel->checkQtyMessageCriteria($block->getItems());
+?>
+
+<?php if($isDisplayQtyMessage) : ?>
+<div class="message-success success message">
+    <div><?= $qtyMessageViewModel->getQtyUpdateMessage() ?></div>
+</div>
+<?php endif; ?>

@@ -1,0 +1,28 @@
+<?xml version="1.0"?>
+<config xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="urn:magento:module:Magento_Config:etc/system_file.xsd">
+    <system>
+        <section id="checkout">
+            <tab>sales</tab>
+            <group id="cart">
+                <field id="enable_custom_message_qty" translate="label" type="select" sortOrder="30" showInDefault="1" showInWebsite="1" canRestore="1">
+                    <label>Enable Custom Message Qty Incremental</label>
+                    <source_model>Magento\Config\Model\Config\Source\Yesno</source_model>
+                </field>
+                <field id="cart_qty" translate="label" type="text" sortOrder="40" showInDefault="1"  showInStore="1" canRestore="1">
+                    <label>Cart Item Quantity</label>
+                    <validate>validate-zero-or-greater validate-digits</validate>
+                    <depends>
+                        <field id="enable_custom_message_qty">1</field>
+                    </depends>
+                </field>
+                <field id="update_message" translate="label comment" sortOrder="50" type="editor" showInStore="1" showInDefault="1" >
+                    <label>Success Message</label>
+                    <frontend_model>Endaxis\QtyMessage\Block\Adminhtml\System\Config\Editor</frontend_model>
+                    <depends>
+                        <field id="enable_custom_message_qty">1</field>
+                    </depends>
+                </field>
+            </group>
+        </section>
+    </system>
+</config>
