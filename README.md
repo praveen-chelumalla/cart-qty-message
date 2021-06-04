@@ -20,3 +20,8 @@ While checkout cart item qty reach as per expectation display custom message.
 - Stores >> Configuration >> Sales >> Checkout >> Shopping Cart >> Enable Custom Message Qty Incremental
 - Stores >> Configuration >> Sales >> Checkout >> Shopping Cart >> Cart Item Quantity
 - Stores >> Configuration >> Sales >> Checkout >> Shopping Cart >> Success Message
+
+## Screenshots
+
+<img src="https://nimbus-screenshots.s3.amazonaws.com/s/31b32a74ed615e80ab324c8aa4a0d0fb.png">
+<img src="https://nimbus-screenshots.s3.amazonaws.com/s/3d6d0f2b7c9c497717cb9b9365835134.png">
